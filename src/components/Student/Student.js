@@ -13,8 +13,8 @@ export default class Student extends Component {
     componentDidMount(){
       return axios.get(`http://localhost:3005/students/${this.props.match.params.id}`)
         .then(res => {
-          this.setState({studentInfo: res.data})
-          //console.log(this.state.studentInfo)
+          this.setState({studentInfo: res.data});
+          console.log(this.state.studentInfo)
         })
         //.catch(err => console.log(err))
     }
