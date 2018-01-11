@@ -11,6 +11,8 @@ export default class ClassList extends Component {
     
   }
 
+  
+
   componentDidMount(){
     return axios.get(`http://localhost:3005/students?class=${this.props.match.params.class}`)
     .then(res => {
