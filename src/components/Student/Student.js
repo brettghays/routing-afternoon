@@ -11,7 +11,6 @@ export default class Student extends Component {
     }
 
     componentDidMount(){
-      console.log('fired')
       axios.get(`http://localhost:3005/students/${this.props.match.params.id}`)
       .then(res => {
         this.setState({studentInfo: res.data})
